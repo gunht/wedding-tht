@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "wedding-tht"
+  "cli": {
+    "analytics": false
+  }
 }
