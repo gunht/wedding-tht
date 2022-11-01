@@ -11,6 +11,27 @@ export class AppComponent {
   title = 'Wedding';
   isLoading = false;
 
+  srcAudio = [
+    {
+      src: "src/assets/mp3/ILoveYou3000-StephaniePoetri.mp3"
+    },
+    {
+      src: "/src/assets/mp3/ILoveYou3000-StephaniePoetri.mp3"
+    },
+    {
+      src: "./src/assets/mp3/ILoveYou3000-StephaniePoetri.mp3"
+    },
+    {
+      src: "./assets/mp3/ILoveYou3000-StephaniePoetri.mp3"
+    },
+    {
+      src: "/assets/mp3/ILoveYou3000-StephaniePoetri.mp3"
+    },
+    {
+      src: "assets/mp3/ILoveYou3000-StephaniePoetri.mp3"
+    },
+  ];
+
   images: GalleryItem[] = [];
 
   constructor(
