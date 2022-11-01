@@ -39,8 +39,8 @@ export class AppComponent {
     private lightbox: Lightbox) { }
 
   ngOnInit(): void {
-    this.isLoading = true;
-    this.playAudio();
+    // this.isLoading = true;
+    // this.playAudio();
 
     this.images = this.items.map(item => new ImageItem({ src: item.src, thumb: item.thumb }));
 
@@ -66,10 +66,11 @@ export class AppComponent {
 
   playAudio() {
 
-    let audio = new Audio();
-    audio.src = "https://play.imusicvn.com/stream/TRhJwI6gfaMM";
-    audio.load();
-    audio.play();
+    // let audio = new Audio();
+    // audio.src = "https://play.imusicvn.com/stream/TRhJwI6gfaMM";
+    // audio.load();
+    // audio.play();
+    // console.log('audio', audio);
     this.isLoading = false;
   }
 
