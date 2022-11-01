@@ -1,0 +1,304 @@
+/*
+font-family: 'Island Moments', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Noto Sans', sans-serif;
+*/
+
+.title_block {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+.main_thumbnail {
+  height: 100vh;
+  min-height: 300px;
+  background-image: url(../assets/img/template.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+  .cover_name {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      font-family: "Island Moments", cursive;
+      font-size: 4em;
+      width: 100%;
+      display: flex;
+      margin-bottom: 3rem;
+      align-items: center;
+      justify-content: center;
+      .left,
+      .right {
+        width: 300px;
+        text-align: center;
+      }
+      .center {
+        padding: 0 8%;
+      }
+    }
+    .time {
+      font-family: "Kalam", cursive;
+      font-size: 2rem;
+    }
+  }
+}
+
+.address_info {
+  margin: 32px 0;
+  .text_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    .text {
+      margin-bottom: 8px;
+    }
+    .time {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .sub_time {
+      font-style: italic;
+      font-family: "Kalam", cursive;
+    }
+  }
+
+  .thumb {
+    width: 50%;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  .address_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Kalam", cursive;
+  }
+}
+
+.timeline {
+  text-align: center;
+  margin: 55px 0;
+  .wrap_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .block {
+    min-width: 325px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &:nth-child(2)::after,
+    &:nth-child(1)::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 1;
+    }
+    &:nth-child(1)::before {
+      left: -5px;
+      top: calc(50% - 5px);
+    }
+    &:nth-child(2)::after {
+      right: -5px;
+      top: calc(50% - 5px);
+    }
+    .item_1 {
+      width: 55px;
+      height: 100%;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .item_2 {
+      border-top: 1px solid #333;
+      height: 100%;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 15px;
+        background: #333;
+      }
+      .time {
+        margin-top: 20px;
+        font-size: 18px;
+        margin-bottom: 0;
+        font-family: "Kalam", cursive;
+      }
+      .text {
+        font-family: "Island Moments", cursive;
+        font-size: 35px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.our_story_block {
+  height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  .wallpaper {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/wallpaper.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    position: absolute;
+    z-index: -1;
+    filter: grayscale(50%);
+  }
+
+  .item_block {
+    display: flex;
+    align-items: center;
+    .wrap_thumb {
+      flex: 1 1 auto;
+      margin: 2%;
+      img {
+        width: 100%;
+      }
+    }
+
+    .our_story {
+      margin-right: 2%;
+      color: white;
+      .title {
+        font-family: "Island Moments", cursive;
+        margin-bottom: 24px;
+        font-size: 3.5rem;
+      }
+      .content {
+        font-family: "Kalam", cursive;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.album {
+  margin: 55px auto;
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .grid-item {
+      width: 320px;
+      margin: 8px;
+      .grid-image {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.maps_info {
+  padding-top: 55px;
+  background-image: url("../assets/img/footer.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+  .wrap_map {
+    width: 50%;
+    margin: auto;
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .wrap_map {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our_story_block {
+    height: 945px;
+    .item_block {
+      flex-direction: column;
+      padding: 32px;
+    }
+  }
+
+  .address_info {
+    .thumb {
+      width: 90%;
+    }
+  }
+
+  .timeline {
+    .wrap_block {
+      flex-direction: column;
+      .block {
+        flex-direction: row;
+        min-width: unset;
+        &::after {
+          left: calc(50% - 43.5px);
+          bottom: 0;
+          right: unset;
+          top: unset;
+        }
+        &::before {
+          left: calc(50% - 43.5px);
+          top: 0;
+        }
+        .item_1 {
+          margin: auto 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 16px;
+        }
+        .item_2 {
+          border-top: unset;
+          border-left: 1px solid #333;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          &::before {
+            width: 15px;
+            height: 1px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .wrap_map {
+    width: 100% !important;
+  }
+}
