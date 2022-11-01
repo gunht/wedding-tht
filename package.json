@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-server-1": "ng build --configuration=production --base-href https://gunht.github.io/wedding-tht/",
+    "build-server-2": "ng build --configuration=production --base-href=/wedding-tht/",
+    "build-server-3": "ngh --dir=dist/wedding-tht"
   },
   "private": true,
   "dependencies": {
