@@ -65,8 +65,9 @@ export class AppComponent {
   }
 
   playAudio() {
+
     let audio = new Audio();
-    audio.src = "src/assets/ILoveYou3000-StephaniePoetri.mp3";
+    audio.src = "./assets/mp3/ILoveYou3000-StephaniePoetri.mp3";
     audio.load();
     audio.play();
     this.isLoading = false;
